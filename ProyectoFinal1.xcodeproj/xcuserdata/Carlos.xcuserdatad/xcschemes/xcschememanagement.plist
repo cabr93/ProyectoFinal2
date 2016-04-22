@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ProyectoFinal1W (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>ProyectoFinal1W.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -23,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>07C8F5F11CC6898A00A22DF0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>07F198F31CC7131F00B4627D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
