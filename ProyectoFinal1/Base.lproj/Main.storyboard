@@ -238,7 +238,7 @@
                                             <segue destination="yvy-T1-bSz" kind="show" id="wXu-UQ-7dA"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Item" id="hZP-Hu-ckU">
+                                    <barButtonItem title="Watch" id="hZP-Hu-ckU">
                                         <connections>
                                             <action selector="enviarW:" destination="hb7-dV-ym5" id="FtG-iR-MWP"/>
                                         </connections>
