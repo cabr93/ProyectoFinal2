@@ -161,16 +161,19 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="7DC-tF-l4b">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gM1-38-XAp"/>
                                     <barButtonItem title="QR" id="Zzf-ai-Vai">
                                         <connections>
                                             <segue destination="yvy-T1-bSz" kind="show" id="0z4-x9-Gk5"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gED-o3-tDt"/>
                                     <barButtonItem enabled="NO" title="Mostrar ruta" id="5PT-og-tYC">
                                         <connections>
                                             <action selector="agregarR:" destination="gxX-yS-2kp" id="dPA-5g-Bus"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Oug-8v-2Ci"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -233,16 +236,19 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="I4h-Gf-8lu">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7vg-cj-9JG"/>
                                     <barButtonItem title="QR" id="Ekr-Sv-iTY">
                                         <connections>
                                             <segue destination="yvy-T1-bSz" kind="show" id="wXu-UQ-7dA"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DLd-4m-0VY"/>
                                     <barButtonItem title="Watch" id="hZP-Hu-ckU">
                                         <connections>
                                             <action selector="enviarW:" destination="hb7-dV-ym5" id="FtG-iR-MWP"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sOc-ml-vG9"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -486,6 +492,6 @@
         <image name="navegacion.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wXu-UQ-7dA"/>
+        <segue reference="0z4-x9-Gk5"/>
     </inferredMetricsTieBreakers>
 </document>
