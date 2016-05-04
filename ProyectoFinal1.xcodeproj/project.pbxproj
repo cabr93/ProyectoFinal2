@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0701DA911CD955D4002F9A2F /* VCEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701DA901CD955D4002F9A2F /* VCEventos.swift */; };
+		0701DA931CD9588A002F9A2F /* TVCEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0701DA921CD9588A002F9A2F /* TVCEventos.swift */; };
+		0713F6BF1CD6D8DE00380B08 /* eventos.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713F6BE1CD6D8DE00380B08 /* eventos.png */; };
+		0713F6C11CD6D91900380B08 /* acerca.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713F6C01CD6D91900380B08 /* acerca.png */; };
+		0713F6C51CD6DBC300380B08 /* acercade.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713F6C41CD6DBC200380B08 /* acercade.png */; };
+		0713F6C71CD6DF2700380B08 /* swift.png in Resources */ = {isa = PBXBuildFile; fileRef = 0713F6C61CD6DF2700380B08 /* swift.png */; };
 		073386731CC91B5200C36602 /* blanco.png in Resources */ = {isa = PBXBuildFile; fileRef = 073386721CC91B5200C36602 /* blanco.png */; };
 		073386791CC9281500C36602 /* VCMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073386781CC9281500C36602 /* VCMapa.swift */; };
+		07884D1B1CD8F1B1004B0313 /* ITESM.png in Resources */ = {isa = PBXBuildFile; fileRef = 07884D191CD8F1B1004B0313 /* ITESM.png */; };
+		07884D1C1CD8F1B1004B0313 /* coursera.png in Resources */ = {isa = PBXBuildFile; fileRef = 07884D1A1CD8F1B1004B0313 /* coursera.png */; };
 		07A67B001CCA85E90021C5B7 /* VCMapaDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A67AFF1CCA85E90021C5B7 /* VCMapaDos.swift */; };
 		07A67C041CCAC51E0021C5B7 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A67C031CCAC51E0021C5B7 /* WatchConnectivity.framework */; };
 		07C8F5D41CC6898A00A22DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F5D31CC6898A00A22DF0 /* AppDelegate.swift */; };
@@ -23,6 +31,20 @@
 		07C8F61B1CC6DB2A00A22DF0 /* navegacion.png in Resources */ = {isa = PBXBuildFile; fileRef = 07C8F6191CC6DB2A00A22DF0 /* navegacion.png */; };
 		07C8F61D1CC6E53500A22DF0 /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F61C1CC6E53500A22DF0 /* VC.swift */; };
 		07C8F61F1CC6E54500A22DF0 /* VCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8F61E1CC6E54500A22DF0 /* VCP.swift */; };
+		07CB25741CD7B5E80006CD62 /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB256F1CD7B5E80006CD62 /* ARAnnotation.swift */; };
+		07CB25751CD7B5E80006CD62 /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB25701CD7B5E80006CD62 /* ARAnnotationView.swift */; };
+		07CB25761CD7B5E80006CD62 /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB25711CD7B5E80006CD62 /* ARConfiguration.swift */; };
+		07CB25771CD7B5E80006CD62 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB25721CD7B5E80006CD62 /* ARTrackingManager.swift */; };
+		07CB25781CD7B5E80006CD62 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB25731CD7B5E80006CD62 /* ARViewController.swift */; };
+		07CB257B1CD7B5FC0006CD62 /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB257A1CD7B5FC0006CD62 /* DebugMapViewController.swift */; };
+		07CB25811CD7B62F0006CD62 /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07CB257D1CD7B62F0006CD62 /* DebugMapViewController.xib */; };
+		07CB25821CD7B62F0006CD62 /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB257E1CD7B62F0006CD62 /* hdar_close.png */; };
+		07CB25831CD7B62F0006CD62 /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB257F1CD7B62F0006CD62 /* hdar_close@2x.png */; };
+		07CB25841CD7B62F0006CD62 /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 07CB25801CD7B62F0006CD62 /* hdar_close@3x.png */; };
+		07CB25861CD7B6E60006CD62 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB25851CD7B6E60006CD62 /* CoreLocation.framework */; };
+		07CB25881CD7B6EC0006CD62 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB25871CD7B6EC0006CD62 /* CoreMotion.framework */; };
+		07CB258A1CD7B6FC0006CD62 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CB25891CD7B6FC0006CD62 /* MapKit.framework */; };
+		07CB258C1CD7B8630006CD62 /* TestAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CB258B1CD7B8620006CD62 /* TestAnnotationView.swift */; };
 		07F198F81CC7131F00B4627D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F198F61CC7131F00B4627D /* Interface.storyboard */; };
 		07F198FA1CC7131F00B4627D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F198F91CC7131F00B4627D /* Assets.xcassets */; };
 		07F199011CC7132000B4627D /* ProyectoFinal1W Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 07F199001CC7132000B4627D /* ProyectoFinal1W Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -92,8 +114,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0701DA901CD955D4002F9A2F /* VCEventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCEventos.swift; sourceTree = "<group>"; };
+		0701DA921CD9588A002F9A2F /* TVCEventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVCEventos.swift; sourceTree = "<group>"; };
+		0713F6BE1CD6D8DE00380B08 /* eventos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eventos.png; sourceTree = "<group>"; };
+		0713F6C01CD6D91900380B08 /* acerca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acerca.png; sourceTree = "<group>"; };
+		0713F6C41CD6DBC200380B08 /* acercade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acercade.png; sourceTree = "<group>"; };
+		0713F6C61CD6DF2700380B08 /* swift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swift.png; sourceTree = "<group>"; };
 		073386721CC91B5200C36602 /* blanco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blanco.png; sourceTree = "<group>"; };
 		073386781CC9281500C36602 /* VCMapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapa.swift; sourceTree = "<group>"; };
+		07884D191CD8F1B1004B0313 /* ITESM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ITESM.png; sourceTree = "<group>"; };
+		07884D1A1CD8F1B1004B0313 /* coursera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coursera.png; sourceTree = "<group>"; };
 		07A67AFF1CCA85E90021C5B7 /* VCMapaDos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapaDos.swift; sourceTree = "<group>"; };
 		07A67C011CCAC0F50021C5B7 /* ProyectoFinal1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProyectoFinal1.entitlements; sourceTree = "<group>"; };
 		07A67C021CCAC21F0021C5B7 /* ProyectoFinal1W.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ProyectoFinal1W.entitlements; sourceTree = "<group>"; };
@@ -116,6 +146,20 @@
 		07C8F6191CC6DB2A00A22DF0 /* navegacion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navegacion.png; sourceTree = "<group>"; };
 		07C8F61C1CC6E53500A22DF0 /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		07C8F61E1CC6E54500A22DF0 /* VCP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCP.swift; sourceTree = "<group>"; };
+		07CB256F1CD7B5E80006CD62 /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		07CB25701CD7B5E80006CD62 /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		07CB25711CD7B5E80006CD62 /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		07CB25721CD7B5E80006CD62 /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		07CB25731CD7B5E80006CD62 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		07CB257A1CD7B5FC0006CD62 /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		07CB257D1CD7B62F0006CD62 /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		07CB257E1CD7B62F0006CD62 /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		07CB257F1CD7B62F0006CD62 /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		07CB25801CD7B62F0006CD62 /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		07CB25851CD7B6E60006CD62 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		07CB25871CD7B6EC0006CD62 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		07CB25891CD7B6FC0006CD62 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		07CB258B1CD7B8620006CD62 /* TestAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAnnotationView.swift; sourceTree = "<group>"; };
 		07F198F41CC7131F00B4627D /* ProyectoFinal1W.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinal1W.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F198F71CC7131F00B4627D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		07F198F91CC7131F00B4627D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,6 +180,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CB258A1CD7B6FC0006CD62 /* MapKit.framework in Frameworks */,
+				07CB25881CD7B6EC0006CD62 /* CoreMotion.framework in Frameworks */,
+				07CB25861CD7B6E60006CD62 /* CoreLocation.framework in Frameworks */,
 				07A67C041CCAC51E0021C5B7 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +214,9 @@
 		07C8F5C71CC6898A00A22DF0 = {
 			isa = PBXGroup;
 			children = (
+				07CB25891CD7B6FC0006CD62 /* MapKit.framework */,
+				07CB25871CD7B6EC0006CD62 /* CoreMotion.framework */,
+				07CB25851CD7B6E60006CD62 /* CoreLocation.framework */,
 				07A67C031CCAC51E0021C5B7 /* WatchConnectivity.framework */,
 				07C8F5D21CC6898A00A22DF0 /* ProyectoFinal1 */,
 				07C8F5EA1CC6898A00A22DF0 /* ProyectoFinal1Tests */,
@@ -192,10 +242,20 @@
 		07C8F5D21CC6898A00A22DF0 /* ProyectoFinal1 */ = {
 			isa = PBXGroup;
 			children = (
+				07CB257C1CD7B6140006CD62 /* resources */,
+				07CB256E1CD7B5AF0006CD62 /* Classes */,
+				0701DA901CD955D4002F9A2F /* VCEventos.swift */,
+				07884D191CD8F1B1004B0313 /* ITESM.png */,
+				07884D1A1CD8F1B1004B0313 /* coursera.png */,
 				07A67C011CCAC0F50021C5B7 /* ProyectoFinal1.entitlements */,
 				073386721CC91B5200C36602 /* blanco.png */,
+				0701DA921CD9588A002F9A2F /* TVCEventos.swift */,
+				0713F6C61CD6DF2700380B08 /* swift.png */,
+				0713F6C41CD6DBC200380B08 /* acercade.png */,
 				07C8F6181CC6DB2A00A22DF0 /* QR.png */,
 				07C8F6191CC6DB2A00A22DF0 /* navegacion.png */,
+				0713F6BE1CD6D8DE00380B08 /* eventos.png */,
+				0713F6C01CD6D91900380B08 /* acerca.png */,
 				07C8F5D31CC6898A00A22DF0 /* AppDelegate.swift */,
 				07FF64E41CC6ECE900BBF594 /* NVC.swift */,
 				07C8F61E1CC6E54500A22DF0 /* VCP.swift */,
@@ -208,6 +268,7 @@
 				07C8F5DF1CC6898A00A22DF0 /* LaunchScreen.storyboard */,
 				07C8F5E21CC6898A00A22DF0 /* Info.plist */,
 				07C8F5DA1CC6898A00A22DF0 /* ProyectoFinal1.xcdatamodeld */,
+				07CB258B1CD7B8620006CD62 /* TestAnnotationView.swift */,
 				073386781CC9281500C36602 /* VCMapa.swift */,
 				07A67AFF1CCA85E90021C5B7 /* VCMapaDos.swift */,
 			);
@@ -230,6 +291,39 @@
 				07C8F5F81CC6898A00A22DF0 /* Info.plist */,
 			);
 			path = ProyectoFinal1UITests;
+			sourceTree = "<group>";
+		};
+		07CB256E1CD7B5AF0006CD62 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				07CB256F1CD7B5E80006CD62 /* ARAnnotation.swift */,
+				07CB25701CD7B5E80006CD62 /* ARAnnotationView.swift */,
+				07CB25711CD7B5E80006CD62 /* ARConfiguration.swift */,
+				07CB25721CD7B5E80006CD62 /* ARTrackingManager.swift */,
+				07CB25731CD7B5E80006CD62 /* ARViewController.swift */,
+				07CB25791CD7B5EF0006CD62 /* debug */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		07CB25791CD7B5EF0006CD62 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				07CB257A1CD7B5FC0006CD62 /* DebugMapViewController.swift */,
+			);
+			name = debug;
+			sourceTree = "<group>";
+		};
+		07CB257C1CD7B6140006CD62 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				07CB257D1CD7B62F0006CD62 /* DebugMapViewController.xib */,
+				07CB257E1CD7B62F0006CD62 /* hdar_close.png */,
+				07CB257F1CD7B62F0006CD62 /* hdar_close@2x.png */,
+				07CB25801CD7B62F0006CD62 /* hdar_close@3x.png */,
+			);
+			name = resources;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		07F198F51CC7131F00B4627D /* ProyectoFinal1W */ = {
@@ -427,10 +521,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C8F61A1CC6DB2A00A22DF0 /* QR.png in Resources */,
+				07CB25821CD7B62F0006CD62 /* hdar_close.png in Resources */,
+				0713F6C51CD6DBC300380B08 /* acercade.png in Resources */,
+				07884D1C1CD8F1B1004B0313 /* coursera.png in Resources */,
+				07CB25811CD7B62F0006CD62 /* DebugMapViewController.xib in Resources */,
+				0713F6BF1CD6D8DE00380B08 /* eventos.png in Resources */,
 				07C8F5E11CC6898A00A22DF0 /* LaunchScreen.storyboard in Resources */,
 				073386731CC91B5200C36602 /* blanco.png in Resources */,
+				0713F6C11CD6D91900380B08 /* acerca.png in Resources */,
 				07C8F61B1CC6DB2A00A22DF0 /* navegacion.png in Resources */,
+				07CB25841CD7B62F0006CD62 /* hdar_close@3x.png in Resources */,
+				07884D1B1CD8F1B1004B0313 /* ITESM.png in Resources */,
+				0713F6C71CD6DF2700380B08 /* swift.png in Resources */,
 				07C8F5DE1CC6898A00A22DF0 /* Assets.xcassets in Resources */,
+				07CB25831CD7B62F0006CD62 /* hdar_close@2x.png in Resources */,
 				07C8F5D91CC6898A00A22DF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,14 +577,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CB257B1CD7B5FC0006CD62 /* DebugMapViewController.swift in Sources */,
+				07CB258C1CD7B8630006CD62 /* TestAnnotationView.swift in Sources */,
 				07A67B001CCA85E90021C5B7 /* VCMapaDos.swift in Sources */,
 				07C8F61D1CC6E53500A22DF0 /* VC.swift in Sources */,
+				0701DA931CD9588A002F9A2F /* TVCEventos.swift in Sources */,
 				07C8F5DC1CC6898A00A22DF0 /* ProyectoFinal1.xcdatamodeld in Sources */,
+				07CB25781CD7B5E80006CD62 /* ARViewController.swift in Sources */,
 				07C8F61F1CC6E54500A22DF0 /* VCP.swift in Sources */,
 				073386791CC9281500C36602 /* VCMapa.swift in Sources */,
+				07CB25761CD7B5E80006CD62 /* ARConfiguration.swift in Sources */,
+				07CB25771CD7B5E80006CD62 /* ARTrackingManager.swift in Sources */,
 				07C8F5D61CC6898A00A22DF0 /* ViewController.swift in Sources */,
 				07C8F5D41CC6898A00A22DF0 /* AppDelegate.swift in Sources */,
+				07CB25741CD7B5E80006CD62 /* ARAnnotation.swift in Sources */,
 				07F1991E1CC7E01C00B4627D /* TVC.swift in Sources */,
+				07CB25751CD7B5E80006CD62 /* ARAnnotationView.swift in Sources */,
+				0701DA911CD955D4002F9A2F /* VCEventos.swift in Sources */,
 				07F199201CC7E11200B4627D /* VCnuevo.swift in Sources */,
 				07FF64E51CC6ECE900BBF594 /* NVC.swift in Sources */,
 			);

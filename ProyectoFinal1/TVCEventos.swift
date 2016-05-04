@@ -1,48 +1,66 @@
 //
-//  TVC.swift
+//  TVCEventos.swift
 //  ProyectoFinal1
 //
-//  Created by Carlos Buitrago on 20/04/16.
+//  Created by Carlos Buitrago on 3/05/16.
 //  Copyright © 2016 Carlos Buitrago. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class TVC: UITableViewController, UITextFieldDelegate,PasarInfo  {
+class TVCEventos: UITableViewController {
     
-    var rutas :Array<Array<String>> = Array<Array<String>>()
+    var info :Array<Array<String>> = Array<Array<String>>()
     var imagenes: Array<UIImage> = Array<UIImage>()
-    var contexto:NSManagedObjectContext? = nil
-    var flag = true
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-        
-        let seccionEntidad = NSEntityDescription.entityForName("Ruta", inManagedObjectContext: self.contexto!)
-        let peticion = seccionEntidad?.managedObjectModel.fetchRequestTemplateForName("petSecciones")
-        do{
-            let seccionesEntidad = try self.contexto?.executeFetchRequest(peticion!)
-            for seccionesEntidad2 in seccionesEntidad!{
-                let nombre = seccionesEntidad2.valueForKey("nombre") as! String
-                let descripcion = seccionesEntidad2.valueForKey("descripcion") as! String
-                let imagen = UIImage(data: seccionesEntidad2.valueForKey("foto") as! NSData)
-                self.rutas.append([nombre,descripcion])
-                self.imagenes.append(imagen!)
+        let urls: String = "http://104.236.91.248/mexico"
+        let url = NSURL(string: urls)
+        let datos = NSData(contentsOfURL: url!)
+        if datos == nil{
+            let alert = UIAlertController(title:"Error", message: "No hay conexion a Internet", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+            return
+        }
+        else {
+            do{
+                let json = try NSJSONSerialization.JSONObjectWithData(datos!, options: NSJSONReadingOptions.MutableLeaves)
+                let dico1 = json as! NSDictionary
+                if dico1["events"] != nil
+                {
+                    let eventos = dico1["events"] as! NSArray
+                    for i in eventos{
+                        let fecha  : String  = i["date"] as! NSString as String
+                        let nombre: String  = i["name"] as! NSString as String
+                        let descripcion: String  = i["description"] as! NSString as String
+                        let imagen: String  = i["image"] as! NSString as String
+                        let fot = NSURL(string: imagen)
+                        let dat = NSData(contentsOfURL: fot!)
+                        let caratula = UIImage(data:dat!)
+                        self.info.append([fecha,nombre,descripcion])
+                        self.imagenes.append(caratula!)
+                        print(nombre)
+                    }
+                }
+                else
+                {
+                    let alert = UIAlertController(title: "Events Request", message: "Not found events", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
+            }
+            catch _ {
+                
             }
         }
-        catch{
-            
-        }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    override func viewDidAppear(animated: Bool) {
-        flag = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,44 +77,19 @@ class TVC: UITableViewController, UITextFieldDelegate,PasarInfo  {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.rutas.count
+        return self.info.count
     }
-    
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("celda", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("celda2", forIndexPath: indexPath)
         
-        // Configure the cell...
-        
-        cell.textLabel?.text = self.rutas[indexPath.row][0]
-        cell.detailTextLabel?.text = self.rutas[indexPath.row][1]
+        cell.textLabel?.text = "\(self.info[indexPath.row][0]): \(self.info[indexPath.row][1])"
+        cell.detailTextLabel?.text = self.info[indexPath.row][2]
         cell.imageView!.image = self.imagenes[indexPath.row]
-        return cell
-    }
-    func ruta(nombre: String, descripcion: String, imagen:UIImage){
-        rutas.append([nombre ,descripcion])
-        imagenes.append(imagen)
-        self.tableView.beginUpdates()
-        self.tableView.insertRowsAtIndexPaths([
-            NSIndexPath(forRow: rutas.count-1, inSection: 0)
-            ], withRowAnimation: .Automatic)
-        self.tableView.endUpdates()
-        
-    }
-
-    
-    @IBAction func agregarR(sender: AnyObject) {
-        flag = false
-        performSegueWithIdentifier("addr", sender: sender)
-    }
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -142,19 +135,5 @@ class TVC: UITableViewController, UITextFieldDelegate,PasarInfo  {
         // Pass the selected object to the new view controller.
     }
     */
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if !flag {
-            let cc = segue.destinationViewController as! VCnuevo
-            cc.delegate = self
-        }
-        else{
-            let cc = segue.destinationViewController as! VCMapa
-            let ip = self.tableView.indexPathForSelectedRow
-            cc.ruta = self.rutas[ip!.row][0]
-        }
-    }
-
 
 }

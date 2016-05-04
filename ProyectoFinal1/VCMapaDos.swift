@@ -9,9 +9,10 @@
 import UIKit
 import MapKit
 import WatchConnectivity
+import CoreLocation
 
 
-class VCMapaDos: UIViewController, MKMapViewDelegate, WCSessionDelegate {
+class VCMapaDos: UIViewController, MKMapViewDelegate, WCSessionDelegate,ARDataSource  {
     
     @IBOutlet weak var mapaRuta: MKMapView!
     
@@ -22,7 +23,7 @@ class VCMapaDos: UIViewController, MKMapViewDelegate, WCSessionDelegate {
     private var anterior :MKMapItem!
     
     var watchSession : WCSession?
-    
+    var flag = false
     
     var puntos :Array<Array<String>> = Array<Array<String>>()
     var punto = CLLocationCoordinate2D()
@@ -92,4 +93,48 @@ class VCMapaDos: UIViewController, MKMapViewDelegate, WCSessionDelegate {
             NSLog("Updating the context failed: " + error.localizedDescription)
         }
     }
+    @IBAction func compartir(sender: AnyObject) {
+        var sharingItems = [AnyObject]()
+        for var i = 0; i < puntos.count; i++ {
+            sharingItems.append(" \(puntos[i][2]) : latitud \(puntos[i][0]) longitud \(puntos[i][1]) \n \n")
+        }
+        let actividadRD=UIActivityViewController(activityItems: sharingItems, applicationActivities: nil)
+        self.presentViewController(actividadRD,animated: true, completion:nil)
+    }
+    @IBAction func realidadA(sender: AnyObject) {
+        iniciRAG()
+    }
+    
+    func iniciRAG(){
+        let puntosDeInteres = obtenerAnotaciones()
+        var arViewController = ARViewController()
+        arViewController.debugEnabled = true
+        arViewController.dataSource = self
+        arViewController.maxDistance = 0
+        arViewController.maxVisibleAnnotations = 100
+        arViewController.maxVerticalLevel = 5
+        arViewController.trackingManager.userDistanceFilter = 25
+        arViewController.trackingManager.reloadDistanceFilter = 75
+        
+        arViewController.setAnnotations(puntosDeInteres)
+        self.presentViewController(arViewController, animated: true, completion: nil)
+    }
+    
+    private func obtenerAnotaciones() -> Array<ARAnnotation>{
+        var anotaciones:[ARAnnotation] = []
+        for var i = 0; i < puntos.count; i++ {
+            let anotacion = ARAnnotation()
+            anotacion.location = CLLocation(latitude: Double(puntos[i][0])!, longitude: Double(puntos[i][1])!)
+            anotacion.title = puntos[i][2]
+            anotaciones.append(anotacion)
+        }
+        return anotaciones
+    }
+    func ar(arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let vista = TestAnnotationView()
+        vista.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        vista.frame = CGRect(x: 0, y: 0, width: 150, height: 60)
+        return vista
+    }
+
 }

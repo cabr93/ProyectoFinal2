@@ -23,6 +23,9 @@ class VCMapa: UIViewController,CLLocationManagerDelegate,UITextFieldDelegate,MKM
     var posicion = 0
     var puntos :Array<Array<String>> = Array<Array<String>>()
     
+    //Cores Data
+    var ruta = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
